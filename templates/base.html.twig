@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app.request.locale }}">
+
     <head>
+
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}FGM{% endblock %}</title>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.jpg') }}">
+
+        <!-- Google Fonts 
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Slab:400,700');
+        -->
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Slab:400,700">
+
+        {% block stylesheets %}
+
+            <!-- all css here -->
+            <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/magnific-popup.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/animate.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/owl.carousel.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/font-awesome.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/et-line-icon.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/bicon.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/slick.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/meanmenu.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/bundle.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('/assets/css/responsive.css') }}">
+
+        {% endblock %}
+
     </head>
+
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {{ include('default/_header.html.twig') }}
+
+        {% block body %}
+        {% endblock %}
+
+        {% block javascripts %}
+
+            <!-- all js here -->
+            <script src="{{ asset('assets/js/vendor/jquery-1.12.0.min.js') }}"></script>
+            <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+            <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+            <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
+            <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+            <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
+            <script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
+            <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('assets/js/plugins.js') }}"></script>
+            <script src="{{ asset('assets/js/main.js') }}"></script>
+
+        {% endblock %}
+
     </body>
+
 </html>

@@ -1,0 +1,171 @@
+<header class="header-area">
+        <div class="header-top black-light-bg ptb-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="header-info">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> <a href="#">fgmreconstructivesurgery.com</a></li>
+                                <li><i class="fa fa-phone"></i> (+31) 000 000 000</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 hidden-xs">
+                        <div class="header-social f-right">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="logo">
+                            <a href="index.html"><img src="{{ asset('/assets/img/logo/1.png') }}" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 hidden-xs">
+                        <div class="search-menu f-right">
+                            <div class="search-bar-button">
+                                <a href="#"><i class="fa fa-search"></i></a>
+                                <div class="widget_searchform_content">
+                                    <form action="#">
+                                        <input type="text" placeholder="Search" name="s" value="">
+                                        <button class="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-menu f-right">
+                            <nav>
+                                <ul>
+                                    <li><a href="index.html">home <i class="fa fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="index.html">home version 1</a></li>
+                                            <li><a href="index-2.html">home version 2</a></li>
+                                            <li><a href="index-3.html">home version 3</a></li>
+                                            <li><a href="index-4.html">home version 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="causes.html">CAUSE  </a></li>
+                                    <li><a href="event.html">EVENTS </a></li>
+                                    <li><a href="#">PAGES  <i class="fa fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="about-us.html">about us</a></li>
+                                            <li><a href="causes.html">causes page</a></li>
+                                            <li><a href="event.html">event page</a></li>
+                                            <li><a href="gallery.html">gallery page</a></li>
+                                            <li><a href="volunteer.html">volunteer </a></li>
+                                            <li><a href="contact.html">contact us</a></li>
+                                            <li><a href="event-details.html">event details</a></li>
+                                            <li><a href="causes-details.html">causes details</a></li>
+                                            <li><a href="become-volunteer.html">become volunteer</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html">BLOG <i class="fa fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="blog.html">blog page</a></li>
+                                            <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
+                                            <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
+                                            <li><a href="blog-details.html">blog details </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">CONTACT </a></li>
+
+                                    <li>
+                                        <a href="#">{{ 'menu.choose_language'|trans }} <i class="fa fa-angle-down"></i></a>
+
+                                        <ul>
+                                            {% for locale in locales() %}
+                                            <li {% if app.request.locale == locale.code %}aria-checked="true" class="enabled"{% else %}aria-checked="false"{% endif %} role="menuitem">
+                                                <a class="nav-link" href="{{ path(app.request.get('_route', 'blog_index'), app.request.get('_route_params', [])|merge({_locale: locale.code})) }}">
+                                                    {{ locale.name|capitalize }}
+                                                </a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+
+
+
+
+                                </ul>
+
+                                <ul class="nav navbar-nav mr-auto">
+                
+                                   
+                                    
+                                </ul>
+
+
+
+
+
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-area visible-xs hidden-sm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mobile-menu">
+                                <nav id="mobile-menu-active">
+                                    <ul>
+                                        <li><a href="index.html">HOME</a>
+                                            <ul class="menu-overflow">
+                                                <li><a href="index.html">home version 1</a></li>
+                                                <li><a href="index-2.html">home version 2</a></li>
+                                                <li><a href="index-3.html">home version 3</a></li>
+                                                <li><a href="index-4.html">home version 4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="causes.html">cause</a></li>
+                                        <li><a href="event.html">events</a></li>
+                                        <li><a href="#">pages</a>
+                                            <ul class="menu-overflow">
+                                                <li><a href="about-us.html">about us</a></li>
+                                                <li><a href="causes.html">causes page</a></li>
+                                                <li><a href="event.html">event page</a></li>
+                                                <li><a href="gallery.html">gallery page</a></li>
+                                                <li><a href="volunteer.html">volunteer </a></li>
+                                                <li><a href="contact.html">contact us</a></li>
+                                                <li><a href="event-details.html">event details</a></li>
+                                                <li><a href="causes-details.html">causes details</a></li>
+                                                <li><a href="become-volunteer.html">become volunteer</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="blog.html">BLOG</a>
+                                            <ul class="menu-overflow">
+                                                <li><a href="blog.html">blog page</a></li>
+                                                <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
+                                                <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
+                                                <li><a href="blog-details.html">blog details </a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">CONTACT</a></li>
+                                    </ul>
+                                </nav>							
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
