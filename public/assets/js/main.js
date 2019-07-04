@@ -102,6 +102,8 @@
         items: 1,
         dots: false,
         nav: true,
+        autoplay: true, 
+        autoplayTimeout: 5000,
         navText: ['prev', 'next'],
         responsive: {
             0: {

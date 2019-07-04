@@ -8,6 +8,12 @@
                 <target> Taal</target>
             </trans-unit>
 
+            <trans-unit id="what.is.fgm">
+                <source>what.is.fgm</source>
+                <target>Wat is VGV ?</target>
+            </trans-unit>
+
+
         </body>
     </file>
 </xliff>
